@@ -13,7 +13,6 @@
 //
 
 // Constructor
-// TASK 1
 //
 Transaction::Transaction( std::string ticker_symbol,  unsigned int day_date,  
         unsigned int month_date,  unsigned year_date, 
@@ -47,7 +46,6 @@ Transaction::~Transaction(){
 }
 
 // Overloaded < operator.
-// TASK 2
 //
 
 bool Transaction::operator<(Transaction const &other) {
@@ -135,14 +133,12 @@ void Transaction::print() {
 
 
 // Constructor
-// TASK 3
 //
 History::History(){
   p_head = nullptr;
 }
 
 // Destructor
-// TASK 3
 //
 History::~History(){
 
@@ -155,7 +151,6 @@ History::~History(){
 }
 
 // read_history(...): Read the transaction history from file.
-// TASK 4
 //
 void History::read_history(){
   ece150::open_file();
@@ -260,7 +255,6 @@ void History::sort_by_date() {
 }
 
 // update_acb_cgl(): Updates the ACB and CGL values.
-// TASK 7
 //
 void History::update_acb_cgl() {
 
@@ -294,7 +288,6 @@ void History::update_acb_cgl() {
 }
 
 // compute_cgl(): )Compute the ACB, and CGL.
-// TASK 8
 double History::compute_cgl(unsigned int year) {
   double total_cgl{ 0.0 };
   Transaction *curr = p_head;
@@ -318,7 +311,6 @@ double History::compute_cgl(unsigned int year) {
 }
 
 // print() Print the transaction history.
-//TASK 9
 //
 void History::print(){
   std::cout << "========== BEGIN TRANSACTION HISTORY ============" << std::endl;
